@@ -7,7 +7,7 @@
 		public $id;
 		public $name;
 		
-		function Role($name)
+	public function Role($name)
 		{
 			$this->name=$name;
 		}

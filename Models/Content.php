@@ -9,7 +9,7 @@
 	public $content;
 	public $images;
 		
-		function Content($title, $content, $images)
+	public	function Content($title, $content, $images)
 		{
 			$this->title=$title;
 			$this->content=$content;
