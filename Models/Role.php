@@ -7,9 +7,11 @@
 		public $id;
 		public $name;
 		
-		function __construct(argument)
+		function Role($name)
 		{
-			# code...
+			$this->name=$name;
 		}
 	}
+	$role = new Role("Admin");
+	var_dump($role);
 ?>

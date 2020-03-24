@@ -6,9 +6,11 @@
 	{
 	public $id;
 	public $name;
-		function __construct(argument)
+		function CategoryContent($name)
 		{
-			# code...
+			$this->name=$name;
 		}
 	}
+	$categorycontent = new CategoryContent("Dia diem du lich");
+	var_dump($categorycontent);
 ?>

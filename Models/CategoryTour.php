@@ -7,9 +7,11 @@ class CategoryTour
 public $id;
 public $name;
 
-	function __construct(argument)
+	function CategoryTour($name)
 	{
-		# code...
+		$this->name=$name;
 	}
 }
+$categorytour = new CategoryTour("Du lich trai nghiem");
+var_dump($categorytour);
 ?>
