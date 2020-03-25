@@ -4,17 +4,18 @@
  */
 class User 
 {
-	private $id;
-	private $name;
-	private $username;
-	private $password;
-	private $email;
-	private $address;
-	private $birthday;
-	private $phone;
-	private $role_id;
-	public function User($name, $username, $password, $email, $address, $birthday, $phone, $role_id)
+	public $id;
+	public $name;
+	public $username;
+	public $password;
+	public $email;
+	public $address;
+	public $birthday;
+	public $phone;
+	public $role_id;
+	public function __construct($id, $name, $username, $password, $email, $address, $birthday, $phone, $role_id)
 	{
+		$this->id=$id;
 		$this->name=$name;
 		$this->username=$username;
 		$this->password=$password;
@@ -26,8 +27,8 @@ class User
 
 	}
 }
-$user = new User("Man Man", "manman123", 123456, "ctmman@gmail.com", "Hue", "01/02/1998", "01232323", 1);
-var_dump($user);
+//$user = new User(1, "Man Man", "manman123", 123456, "ctmman@gmail.com", "Hue", "01/02/1998", "01232323", 1);
+//var_dump($user);
 ?>
 
 

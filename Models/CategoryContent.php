@@ -6,7 +6,7 @@
 	{
 	public $id;
 	public $name;
-		public function CategoryContent($name)
+		public function __construct($name)
 		{
 			$this->name=$name;
 		}

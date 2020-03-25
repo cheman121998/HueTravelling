@@ -11,7 +11,7 @@
 	public $price;
 	public $date_book;
 
-		public function TourDetail($count_adult, $count_child, $price, $date_book){
+		public function __construct($count_adult, $count_child, $price, $date_book){
 			$this->count_adult=$count_adult;
 			$this->count_child=$count_child;
 			$this->price=$price;

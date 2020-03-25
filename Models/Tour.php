@@ -12,7 +12,7 @@
 	public $destination;
 	public $departure_place;
 		
-		public function Tour($name, $policy, $schedule, $date_start, $destination, $departure_place )
+		public function __construct($name, $policy, $schedule, $date_start, $destination, $departure_place )
 		{
 			$this->name=$name;
 			$this->policy=$policy;

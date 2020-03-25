@@ -1,5 +1,13 @@
 <?php   
-    require_once 'Services/connect.php';
+    require_once 'Services/DbConnect.php';
+    require_once 'Services/UserService.php';
+    //$db = new DbConnect();
+    //$db->query();
+    $userService = new UserService();
+    $userService->getUsers();
+    // $userService->updateUser($user);
+    $result = $userService->delete(1);
+    echo $result;
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +19,7 @@
 </head>
 <body>
 <h1>Hello world!</h1>
-   
+
     
 </body>
 </html>

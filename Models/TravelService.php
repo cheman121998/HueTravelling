@@ -13,7 +13,7 @@
 	public $website;
 	public $NNKD;
 		
-	public function TravelService($name, $tax_code, $represent, $phone, $email, $website, $NNKD)
+	public function __construct($name, $tax_code, $represent, $phone, $email, $website, $NNKD)
 		{
 			$this->name=$name;
 			$this->tax_code=$tax_code;

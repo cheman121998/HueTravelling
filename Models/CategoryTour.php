@@ -7,7 +7,7 @@ class CategoryTour
 public $id;
 public $name;
 
-	public function CategoryTour($name)
+	public function __construct($name)
 	{
 		$this->name=$name;
 	}
