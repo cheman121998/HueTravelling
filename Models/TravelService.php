@@ -2,8 +2,7 @@
 	/**
 	 * 
 	 */
-	class TravelService
-	{
+	class TravelService	{
 	public $id;
 	public $name;
 	public $tax_code;

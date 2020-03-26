@@ -2,29 +2,29 @@
 require_once 'Models/TravelService.php';
 require_once 'Services/DbConnect.php';
 
-class UserService {    
-    private $db; // biết vì răng a tách ra k?
+class TravelServiceService {    
+    private $db; 
 
     function __construct(){
        $this->db = new DbConnect();
     }
 
-    function getUsers() {
-        $query = "SELECT * FROM users";
+    function getTravelServices() {
+        $query = "SELECT * FROM travel_services";
         $result = $this->db->query($query);
         return $result;
     }
 
-    function deleteUser($id){
-        $query = "DELETE FROM users where id=".$id;
+    function deleteTravelService($id){
+        $query = "DELETE FROM travel_services where id=".$id;
         $result = $this->db->execute($query);
         return $result;
     }
 
-    //A ví dụ hàm trước, rồi a chuyển về đối tượng sau
-    function addUser($name, $username, $pass, $email, $adress, $birthday, $phone, $role=1){
-        $sql = "INSERT INTO users (name,username,password,email,role_id) VALUES(?,?,?,?,?,?,?,?)";
-        $result = $this->db->add($sql, [$name,$username,$pass,$email,$role]);
+    
+    function addService($user_id, $name, $tax_code, $represent, $phone, $email, $address, $website, $nnkd){
+        $sql = "INSERT INTO travel_services (user_id, name, tax_code, represent, phone, email, address, website, nnkd) VALUES(?,?,?,?,?,?,?,?,?)";
+        $result = $this->db->add($sql, [ $user_id, $name, $tax_code, $represent, $phone, $email, $address, $website, $nnkd]);
         return $result;
     }
     function updateUser(){
