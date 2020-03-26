@@ -16,7 +16,7 @@ class TravelServiceService {
     }
 
     function deleteTravelService($id){
-        $query = "DELETE FROM travel_services where id=".$id;
+        $query = "DELETE FROM travel_services where id=$id";
         $result = $this->db->execute($query);
         return $result;
     }

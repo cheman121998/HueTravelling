@@ -32,7 +32,7 @@
     echo "<br>=========Before========<br>";
     var_dump($service);
     //$newService = $travelService->addService(3,"abc3", "12dfs", "ad", "qqq","qe4","qgt", "qg", "qhe");
-    $newService = $travelService->deleteTravelService(19);
+    $newService = $travelService->deleteTravelService(18);
     //echo "<br> Service add them: $newService";
     $service = $travelService->getTravelServices();
     echo "<br>=========After========<br>";
