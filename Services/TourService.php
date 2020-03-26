@@ -26,14 +26,17 @@ class TourService {
         $result = $this->db->add($sql, [$category_tour_id, $name, $policy, $schedule, $date_start, $destination, $departure_place]);
         return $result;
     }
-    function updateTour(){
+    
+     //Start Function Update 
+    function updateTour($id, $category_tour_id, $name, $policy, $schedule, $date_start, $destination, $departure_place){
+        $sql = "UPDATE users SET category_tour_id=?, name=?, policy=?, schedule=?, date_start=?, destination=?, departure_place=?  WHERE id=$id";
+        $result = $this->db->update($sql, [$category_tour_id, $name, $policy, $schedule, $date_start, $destination, $departure_place]);
+        return $result;
         
     }
-
-    
 }
     
-    ?>
+?>
 
    
 

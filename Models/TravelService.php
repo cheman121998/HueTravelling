@@ -24,7 +24,7 @@
 		}
 		
 	}
-	$travelservice = new TravelService("Công ty du lịch lữ hành ABC", 123321, "Nguyễn Tiến Nam", "01232332", "dulich@gmail.com", "www.travle.com", "12A341");
-	var_dump($travelservice);
+	//$travelservice = new TravelService("Công ty du lịch lữ hành ABC", 123321, "Nguyễn Tiến Nam", "01232332", "dulich@gmail.com", "www.travle.com", "12A341");
+	//var_dump($travelservice);
 
 ?>

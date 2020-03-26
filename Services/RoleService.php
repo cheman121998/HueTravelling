@@ -26,14 +26,17 @@ class RoleService {
         $result = $this->db->add($sql, [$name]);
         return $result;
     }
-    function updateRole(){
+    function updateRole($id, $name){
+        $sql = "UPDATE users SET name=?  WHERE id=$id";
+        $result = $this->db->update($sql, [$name]);
+        return $result;
         
     }
 
     
 }
     
-    ?>
+?>
 
    
 

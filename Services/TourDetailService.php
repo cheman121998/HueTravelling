@@ -26,7 +26,10 @@ class TourDetailService {
         $result = $this->db->add($sql, [$tour_id, $user_id, $count_adult, $count_child, $price, $date_book]);
         return $result;
     }
-    function updateTourDetail(){
+    function updateTourDetail($id, $tour_id, $user_id, $count_adult, $count_child, $price, $date_book){
+        $sql = "UPDATE users SET tour_id=?, user_id=?, count_adult=?, count_child=?, price=?, date_book=?  WHERE id=$id";
+        $result = $this->db->update($sql, [$tour_id, $user_id, $count_adult, $count_child, $price, $date_book]);
+        return $result;
         
     }
 

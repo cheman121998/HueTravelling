@@ -26,7 +26,10 @@ class CategoryTourService {
         $result = $this->db->add($sql, [$name]);
         return $result;
     }
-    function updateCategoryTour(){
+    function updateCategoryTour($id, $name){
+        $sql = "UPDATE users SET name=? WHERE id=$id";
+        $result = $this->db->update($sql, [$name]);
+        return $result;
         
     }
 

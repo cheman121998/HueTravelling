@@ -57,7 +57,6 @@ class DbConnect{
          
             //close
             $conn = null;
-
             return $id;
         } catch(PDOException $e) {
             echo "<br>" . $e->getMessage();
@@ -66,28 +65,24 @@ class DbConnect{
         
     }
 
-    // public function update($sql, $params){
+    public function update($sql, $params){
 
-    //     try {
-    //         $conn = new PDO("mysql:host=".$this->servername.";dbname=".$this->dbname, $this->username, $this->password);
-    //         // set the PDO error mode to exception
-    //         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        try {
+            $conn = new PDO("mysql:host=".$this->servername.";dbname=".$this->dbname, $this->username, $this->password);
+            // set the PDO error mode to exception
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   
-    //         // execute the query
-    //         $stmt = $conn->prepare($sql);
-    //         $stmt->execute($params);       
-    //         $id = $conn->lastInsertId();
-         
-    //         //close
-    //         $conn = null;
+            // execute the query
+            $stmt = $conn->prepare($sql);
+            $stmt->execute($params);  
+            $conn = null;
+            return $stmt;
+        } catch(PDOException $e) {
+            echo "<br>" . $e->getMessage();
+            return null;
+        }  
 
-    //         return $id;
-    //     } catch(PDOException $e) {
-    //         echo "<br>" . $e->getMessage();
-    //         return null;
-    //     }  
-
-    // }
+    }
 }
 
 ?>

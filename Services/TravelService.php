@@ -27,7 +27,10 @@ class TravelServiceService {
         $result = $this->db->add($sql, [ $user_id, $name, $tax_code, $represent, $phone, $email, $address, $website, $nnkd]);
         return $result;
     }
-    function updateUser(){
+    function updateTravelService($id, $user_id, $name, $tax_code, $represent, $phone, $email, $address, $website, $nnkd){
+        $sql = "UPDATE users SET user_id=?, name=?, tax_code=?, represent=?, phone=?, email=?, address=?, website=?, nnkd=?  WHERE id=$id";
+        $result = $this->db->update($sql, [$user_id, $name, $tax_code, $represent, $phone, $email, $address, $website, $nnkd]);
+        return $result;
         
     }
 

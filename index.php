@@ -27,16 +27,28 @@
     //$users = $userService->getUsers();
 
 
-    $travelService = new TravelServiceService();
-    $service = $travelService->getTravelServices();
+    $userService = new UserService();
+    $users = $userService->getUsers();
     echo "<br>=========Before========<br>";
-    var_dump($service);
+    //var_dump($users);
     //$newService = $travelService->addService(3,"abc3", "12dfs", "ad", "qqq","qe4","qgt", "qg", "qhe");
-    $newService = $travelService->deleteTravelService(18);
+    $newId = $userService->updateUser(3, 1,"Name update", "oki", "qqq","qe4","qgt", "qg", "qhe");
     //echo "<br> Service add them: $newService";
-    $service = $travelService->getTravelServices();
+    $users = $userService->getUsers();
     echo "<br>=========After========<br>";
-    var_dump($service);
+    var_dump($users);
+
+
+    //$travelService = new TravelServiceService();
+    //$service = $travelService->getTravelServices();
+    //echo "<br>=========Before========<br>";
+    //var_dump($service);
+    //$newService = $travelService->addService(3,"abc3", "12dfs", "ad", "qqq","qe4","qgt", "qg", "qhe");
+    //$newService = $travelService->deleteTravelService(18);
+    //echo "<br> Service add them: $newService";
+    //$service = $travelService->getTravelServices();
+    //echo "<br>=========After========<br>";
+    //var_dump($service);
 ?>
 </body>
 </html>

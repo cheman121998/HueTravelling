@@ -26,8 +26,11 @@ class CategoryContentService {
         $result = $this->db->add($sql, [$name]);
         return $result;
     }
-    function updateCategoryContent(){
-        
+     //Start Function Update 
+     function updateCategoryContent($id, $name){
+        $sql = "UPDATE category_contents SET name=? WHERE id=$id";
+        $result = $this->db->update($sql, [$name]);
+        return $result;
     }
 
     

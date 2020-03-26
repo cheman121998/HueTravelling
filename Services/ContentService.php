@@ -26,7 +26,10 @@ class ContentService {
         $result = $this->db->add($sql, [$user_id, $category_content_id, $title, $content, $images]);
         return $result;
     }
-    function updateContent(){
+    function updateContent($id, $user_id, $category_content_id, $title, $content, $images){
+        $sql = "UPDATE users SET user_id=?, category_content_id=?, title=?, content=?, images=? WHERE id=$id";
+        $result = $this->db->update($sql, [$user_id, $category_content_id, $title, $content, $images]);
+        return $result;
         
     }
 
